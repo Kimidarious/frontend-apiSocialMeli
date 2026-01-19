@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ==================== VARIÁVEIS DO TEMA ==================== */
+  :root {
+    
+    --meli-yellow: #FFE600;
+    --meli-yellow-dark: #F2C811;
+    
+   
+    --meli-blue: #3483FA;
+    --meli-blue-dark: #2968C8;
+    --meli-blue-light: #4189FB;
+    
+    /* Dark Theme */
+    --bg-primary: #1A1A1A;
+    --bg-secondary: #242424;
+    --bg-tertiary: #2D2D2D;
+    --bg-hover: #333333;
+    
+    
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --text-tertiary: #999999;
+    --text-disabled: #666666;
+    
+    
+    --border-color: #3D3D3D;
+    --border-light: #4D4D4D;
+    
+    
+    --success: #00A650;
+    --error: #F23D4F;
+    --warning: #FF9500;
+    --info: var(--meli-blue);
+    
+    
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ==================== ESTILOS GLOBAIS ==================== */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+  }
+  
+  a {
+    color: var(--meli-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  a:hover {
+    color: var(--meli-blue-dark);
+  }
+  
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+  }
+  
+  input, textarea, select {
+    font-family: inherit;
+    color: var(--text-primary);
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px 12px;
+    transition: all 0.2s;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--meli-blue);
+    box-shadow: 0 0 0 3px rgba(52, 131, 250, 0.1);
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-hover);
+  }
