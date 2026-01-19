@@ -1,0 +1,63 @@
+import { useUser } from '../contexts/UserContext';
+import './Home.css';
+
+const Home = () => {
+  const { activeUserId, activeUserName } = useUser();
+
+  return (
+    <div className="container home">
+      <div className="home-hero">
+        <h1 className="home-title">
+          Bem-vindo ao <span className="highlight-yellow">Social</span>
+          <span className="highlight-blue">Meli</span>
+        </h1>
+        
+        {activeUserId ? (
+          <div className="home-welcome">
+            <p className="home-greeting">
+              Olá, <strong>{activeUserName}</strong>! 👋
+            </p>
+            <p className="home-subtitle">
+              Use o menu acima para navegar entre as funcionalidades
+            </p>
+          </div>
+        ) : (
+          <div className="home-login-prompt">
+            <p className="home-subtitle">
+              Para começar, selecione seu usuário no canto superior direito
+            </p>
+            <div className="home-arrow">👆</div>
+          </div>
+        )}
+      </div>
+
+      <div className="home-features">
+        <div className="feature-card">
+          <div className="feature-icon">👥</div>
+          <h3>Seguidores</h3>
+          <p>Veja quem te segue e quem você está seguindo</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">📰</div>
+          <h3>Feed</h3>
+          <p>Acompanhe publicações dos vendedores que você segue</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">🔥</div>
+          <h3>Promoções</h3>
+          <p>Descubra produtos em promoção exclusivos</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">➕</div>
+          <h3>Publicar</h3>
+          <p>Crie suas próprias publicações de produtos</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
