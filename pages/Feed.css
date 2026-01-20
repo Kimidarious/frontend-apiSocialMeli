@@ -1,0 +1,11 @@
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .empty-hint {
+    font-size: 14px;
+    color: var(--text-tertiary);
+    margin-top: 8px;
+  }

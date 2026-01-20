@@ -1,0 +1,92 @@
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  
+  .page-subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+  }
+  
+  .sort-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .sort-controls label {
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  
+  .sort-select {
+    padding: 8px 12px;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .sort-select:hover {
+    border-color: var(--meli-blue);
+  }
+  
+  .stats-card {
+    background: linear-gradient(135deg, var(--meli-blue) 0%, var(--meli-blue-dark) 100%);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .stat-value {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .stat-label {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+  }
+  
+  .empty-text {
+    font-size: 18px;
+    color: var(--text-secondary);
+  }
