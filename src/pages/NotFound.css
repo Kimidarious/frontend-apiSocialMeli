@@ -1,0 +1,24 @@
+.not-found {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .not-found-code {
+    font-size: 120px;
+    font-weight: 900;
+    color: var(--meli-yellow);
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  
+  .not-found-title {
+    font-size: 32px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+  }
+  
+  .not-found-text {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+  }

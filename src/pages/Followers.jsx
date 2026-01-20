@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useUser } from '../contexts/UserContext';
 import { userService } from '../services/userService';
 import UserCard from '../components/user/UserCard';
+import Loading from '../components/common/Loading';
+import ErrorMessage from '../components/common/ErrorMessage';
 import './Followers.css';
 
 const Followers = () => {
@@ -65,18 +67,9 @@ const Followers = () => {
         </div>
       </div>
 
-      {loading && (
-        <div className="loading">
-          <div className="spinner"></div>
-          <p>Carregando seguidores...</p>
-        </div>
-      )}
+      {loading && <Loading message="Carregando seguidores..." />}
 
-      {error && (
-        <div className="alert alert-error">
-          ❌ {error}
-        </div>
-      )}
+      {error && <ErrorMessage message={error} onRetry={fetchFollowers} />}
 
       {!loading && !error && data && (
         <>
@@ -91,6 +84,9 @@ const Followers = () => {
             <div className="empty-state">
               <p className="empty-icon">😔</p>
               <p className="empty-text">Você ainda não tem seguidores</p>
+              <p className="empty-hint">
+                Publique produtos interessantes para atrair seguidores!
+              </p>
             </div>
           ) : (
             <div className="user-grid">

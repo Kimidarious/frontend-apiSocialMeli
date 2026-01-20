@@ -1,0 +1,53 @@
+.users-table {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: var(--bg-tertiary);
+  }
+  
+  th {
+    text-align: left;
+    padding: 15px 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  td {
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+  }
+  
+  tbody tr:hover {
+    background-color: var(--bg-hover);
+  }
+  
+  .btn-icon {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  
+  .btn-icon:hover {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .btn-danger:hover {
+    background-color: rgba(242, 61, 79, 0.1);
+  }

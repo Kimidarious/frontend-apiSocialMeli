@@ -1,0 +1,16 @@
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .empty-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+  
+  .empty-message {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }

@@ -1,0 +1,21 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--meli-blue);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s;
+    z-index: 1000;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: var(--meli-blue-dark);
+    transform: translateY(-5px);
+  }

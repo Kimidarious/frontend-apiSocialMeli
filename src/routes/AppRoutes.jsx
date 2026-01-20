@@ -7,6 +7,8 @@ import CreatePost from '../pages/CreatePost';
 import CreateUser from '../pages/CreateUser';
 import ExploreUsers from '../pages/ExploreUsers';
 import Promos from '../pages/Promos';
+import AllUsers from '../pages/AllUsers';
+import NotFound from '../pages/NotFound';
 
 const AppRoutes = () => {
   return (
@@ -14,11 +16,13 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/create-user" element={<CreateUser />} />
       <Route path="/explore" element={<ExploreUsers />} />
+      <Route path="/all-users" element={<AllUsers />} />
       <Route path="/followers" element={<Followers />} />
       <Route path="/following" element={<Following />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/create-post" element={<CreatePost />} />
       <Route path="/promos" element={<Promos />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
