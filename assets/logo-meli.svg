@@ -1,0 +1,14 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+ 
+  <rect width="120" height="40" rx="8" fill="#FFE600"/>
+  
+  
+  <text x="10" y="26" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">
+    Social
+  </text>
+  
+  
+  <text x="65" y="26" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#3483FA">
+    Meli
+  </text>
+</svg>

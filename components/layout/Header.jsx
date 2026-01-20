@@ -1,3 +1,4 @@
+import logoMeli from '../../assets/logo-meli.svg';
 import './Header.css';
 
 const Header = () => {
@@ -5,10 +6,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="header-logo">
-          <h1>
-            <span className="logo-social">Social</span>
-            <span className="logo-meli">Meli</span>
-          </h1>
+          <img src={logoMeli} alt="SocialMeli Logo" className="logo-img" />
         </div>
         <p className="header-subtitle">
           Conecte-se com seus vendedores favoritos
