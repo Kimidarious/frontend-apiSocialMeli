@@ -10,6 +10,9 @@ const Navigation = () => {
           <NavLink to="/" className="nav-link">
             🏠 Home
           </NavLink>
+          <NavLink to="/create-user" className="nav-link">
+            ✨ Novo Usuário
+          </NavLink>
           <NavLink to="/followers" className="nav-link">
             👥 Meus Seguidores
           </NavLink>

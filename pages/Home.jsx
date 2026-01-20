@@ -11,7 +11,7 @@ const Home = () => {
           Bem-vindo ao <span className="highlight-yellow">Social</span>
           <span className="highlight-blue">Meli</span>
         </h1>
-        
+
         {activeUserId ? (
           <div className="home-welcome">
             <p className="home-greeting">
@@ -29,7 +29,38 @@ const Home = () => {
           </div>
         )}
       </div>
-    </div>
+      <div className="home-features">
+        <div className="feature-card">
+          <div className="feature-icon">✨</div>
+          <h3>Novo Usuário</h3>
+          <p>Cadastre uma nova conta na plataforma</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">👥</div>
+          <h3>Seguidores</h3>
+          <p>Veja quem te segue e quem você está seguindo</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">📰</div>
+          <h3>Feed</h3>
+          <p>Acompanhe publicações dos vendedores que você segue</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">🔥</div>
+          <h3>Promoções</h3>
+          <p>Descubra produtos em promoção exclusivos</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="feature-icon">➕</div>
+          <h3>Publicar</h3>
+          <p>Crie suas próprias publicações de produtos</p>
+        </div>
+      </div>
+    </div>  
   );
 };
 

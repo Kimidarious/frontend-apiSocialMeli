@@ -4,6 +4,7 @@ import Followers from '../pages/Followers';
 import Following from '../pages/Following';
 import Feed from '../pages/Feed';
 import CreatePost from '../pages/CreatePost';
+import CreateUser from '../pages/CreateUser';
 import Promos from '../pages/Promos';
 
 const AppRoutes = () => {
@@ -14,6 +15,7 @@ const AppRoutes = () => {
       <Route path="/following" element={<Following />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/create-post" element={<CreatePost />} />
+      <Route path="/create-user" element={<CreateUser />} />
       <Route path="/promos" element={<Promos />} />
     </Routes>
   );
