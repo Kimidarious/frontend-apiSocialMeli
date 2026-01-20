@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo amarelo Meli -->
+  <rect width="32" height="32" rx="6" fill="#FFE600"/>
+  
+  <!-- Letras SM em azul -->
+  <text x="16" y="23" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="#3483FA" text-anchor="middle">
+    SM
+  </text>
+</svg>
