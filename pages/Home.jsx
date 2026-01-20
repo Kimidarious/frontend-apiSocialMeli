@@ -18,43 +18,16 @@ const Home = () => {
               Olá, <strong>{activeUserName}</strong>! 👋
             </p>
             <p className="home-subtitle">
-              Use o menu acima para navegar entre as funcionalidades
+              Use o menu acima para navegar
             </p>
           </div>
         ) : (
           <div className="home-login-prompt">
             <p className="home-subtitle">
-              Para começar, selecione seu usuário no canto superior direito
+              👆 Selecione seu usuário no canto superior direito
             </p>
-            <div className="home-arrow">👆</div>
           </div>
         )}
-      </div>
-
-      <div className="home-features">
-        <div className="feature-card">
-          <div className="feature-icon">👥</div>
-          <h3>Seguidores</h3>
-          <p>Veja quem te segue e quem você está seguindo</p>
-        </div>
-
-        <div className="feature-card">
-          <div className="feature-icon">📰</div>
-          <h3>Feed</h3>
-          <p>Acompanhe publicações dos vendedores que você segue</p>
-        </div>
-
-        <div className="feature-card">
-          <div className="feature-icon">🔥</div>
-          <h3>Promoções</h3>
-          <p>Descubra produtos em promoção exclusivos</p>
-        </div>
-
-        <div className="feature-card">
-          <div className="feature-icon">➕</div>
-          <h3>Publicar</h3>
-          <p>Crie suas próprias publicações de produtos</p>
-        </div>
       </div>
     </div>
   );
