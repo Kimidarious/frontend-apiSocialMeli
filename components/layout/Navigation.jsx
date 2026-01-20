@@ -13,6 +13,9 @@ const Navigation = () => {
           <NavLink to="/create-user" className="nav-link">
             ✨ Novo Usuário
           </NavLink>
+          <NavLink to="/explore" className="nav-link">
+            🔍 Explorar
+          </NavLink>
           <NavLink to="/followers" className="nav-link">
             👥 Meus Seguidores
           </NavLink>

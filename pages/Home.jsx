@@ -1,7 +1,9 @@
 import { useUser } from '../contexts/UserContext';
 import './Home.css';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   const { activeUserId, activeUserName } = useUser();
 
   return (
@@ -30,6 +32,11 @@ const Home = () => {
         )}
       </div>
       <div className="home-features">
+        <div className="feature-card" onClick={() => navigate('/explore')} style={{ cursor: 'pointer' }}>
+          <div className="feature-icon">🔍</div>
+          <h3>Explorar</h3>
+          <p>Descubra novos vendedores e comece a seguir</p>
+        </div>
         <div className="feature-card">
           <div className="feature-icon">✨</div>
           <h3>Novo Usuário</h3>
@@ -60,7 +67,7 @@ const Home = () => {
           <p>Crie suas próprias publicações de produtos</p>
         </div>
       </div>
-    </div>  
+    </div>
   );
 };
 

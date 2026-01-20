@@ -1,0 +1,135 @@
+.filter-bar {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    padding: 10px 20px;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filter-btn:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+  }
+  
+  .filter-btn.active {
+    background-color: var(--meli-blue);
+    color: white;
+    border-color: var(--meli-blue);
+  }
+  
+  .alert-warning {
+    background-color: rgba(255, 149, 0, 0.1);
+    border: 1px solid var(--warning);
+    color: var(--warning);
+  }
+  
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  .explore-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s;
+  }
+  
+  .explore-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--meli-blue);
+  }
+  
+  .explore-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+  }
+  
+  .explore-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  
+  .explore-info {
+    flex: 1;
+  }
+  
+  .explore-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  
+  .explore-id {
+    font-size: 12px;
+    color: var(--text-tertiary);
+  }
+  
+  .badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .badge-buyer {
+    background-color: rgba(52, 131, 250, 0.2);
+    color: var(--meli-blue);
+  }
+  
+  .badge-seller {
+    background-color: rgba(0, 166, 80, 0.2);
+    color: var(--success);
+  }
+  
+  .badge-both {
+    background-color: rgba(255, 230, 0, 0.2);
+    color: var(--meli-yellow);
+  }
+  
+  .explore-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .explore-actions .btn {
+    width: 100%;
+  }
+  
+  .btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
