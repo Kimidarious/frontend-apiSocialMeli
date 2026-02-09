@@ -1,75 +1,57 @@
 import { useState } from 'react';
-import { useUser } from '../../contexts/UserContext';
-import { userService } from '../../services/userService';
+import { useAuth } from '../../contexts/AuthContext';
+import LoginModal from '../common/LoginModal';
 import './UserSelector.css';
 
 const UserSelector = () => {
-  const { activeUserId, activeUserName, setActiveUser, clearActiveUser } = useUser();
-  const [inputUserId, setInputUserId] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const { isAuthenticated, user, logout } = useAuth();
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
-  const handleSelectUser = async (e) => {
-    e.preventDefault();
-    
-    if (!inputUserId) {
-      setError('Digite um ID de usuário');
-      return;
-    }
+  const handleLogout = () => {
+    logout();
+  };
 
-    setLoading(true);
-    setError('');
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true);
+  };
 
-    try {
-      const user = await userService.getUserById(Number(inputUserId));
-      setActiveUser(user.user_id, user.user_name);
-      setInputUserId('');
-    } catch (err) {
-      setError('Usuário não encontrado');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false);
   };
 
   return (
-    <div className="user-selector">
-      {activeUserId ? (
-        <div className="user-active">
-          <div className="user-active-info">
-            <span className="user-active-label">Usuário ativo:</span>
-            <span className="user-active-name">{activeUserName}</span>
-            <span className="user-active-id">#{activeUserId}</span>
+    <>
+      <div className="user-selector">
+        {isAuthenticated ? (
+          <div className="user-active">
+            <div className="user-active-info">
+              <span className="user-active-label">👤 Logado como:</span>
+              <span className="user-active-name">{user.userName}</span>
+              <span className="user-active-id">#{user.userId}</span>
+            </div>
+            <button 
+              className="btn-logout" 
+              onClick={handleLogout}
+              title="Sair"
+            >
+              🚪 Sair
+            </button>
           </div>
+        ) : (
           <button 
-            className="btn-logout" 
-            onClick={clearActiveUser}
-            title="Trocar usuário"
+            className="btn btn-yellow btn-login"
+            onClick={openLoginModal}
           >
-            🔄
+            🔐 Login
           </button>
-        </div>
-      ) : (
-        <form onSubmit={handleSelectUser} className="user-selector-form">
-          <input
-            type="number"
-            placeholder="Digite seu ID"
-            value={inputUserId}
-            onChange={(e) => setInputUserId(e.target.value)}
-            className="user-input"
-            min="1"
-          />
-          <button 
-            type="submit" 
-            className="btn btn-yellow"
-            disabled={loading}
-          >
-            {loading ? '...' : 'Entrar'}
-          </button>
-        </form>
-      )}
-      {error && <p className="user-selector-error">{error}</p>}
-    </div>
+        )}
+      </div>
+
+      <LoginModal 
+        isOpen={isLoginModalOpen} 
+        onClose={closeLoginModal}
+      />
+    </>
   );
 };
 

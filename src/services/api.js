@@ -10,6 +10,12 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (config) => {
+    // Adiciona token JWT se existir
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    
     console.log(`🔵 [API] ${config.method.toUpperCase()} ${config.url}`);
     return config;
   },
