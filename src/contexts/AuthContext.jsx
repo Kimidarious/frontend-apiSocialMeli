@@ -1,22 +1,24 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { authService } from '../services/authService';
+import { useUser } from './UserContext';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  const { setActiveUser, clearActiveUser } = useUser();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Verifica se há usuário logado ao carregar a aplicação
   useEffect(() => {
     const authenticatedUser = authService.getAuthenticatedUser();
     if (authenticatedUser) {
       setIsAuthenticated(true);
       setUser(authenticatedUser);
+      setActiveUser(authenticatedUser.userId, authenticatedUser.userName);
     }
     setLoading(false);
-  }, []);
+  }, [setActiveUser]);
 
   /**
    * Faz login do usuário
@@ -38,6 +40,9 @@ export const AuthProvider = ({ children }) => {
       });
       setIsAuthenticated(true);
       
+      // Atualiza o UserContext com os dados do usuário logado
+      setActiveUser(loginData.user_id, loginData.user_name);
+      
       return { success: true };
     } catch (error) {
       console.error('Erro ao fazer login:', error);
@@ -48,13 +53,11 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  /**
-   * Faz logout do usuário
-   */
   const logout = () => {
     authService.clearAuthData();
     setUser(null);
     setIsAuthenticated(false);
+    clearActiveUser();
   };
 
   const value = {

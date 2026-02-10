@@ -12,8 +12,8 @@ import './styles/theme.css';
 function App() {
   return (
     <BrowserRouter>
-      <AuthProvider>
-        <UserProvider>
+      <UserProvider>
+        <AuthProvider>
           <div className="app">
             <Header />
             <Navigation />
@@ -23,8 +23,8 @@ function App() {
             <Footer />
             <ScrollToTop />
           </div>
-        </UserProvider>
-      </AuthProvider>
+        </AuthProvider>
+      </UserProvider>
     </BrowserRouter>
   );
 }

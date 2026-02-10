@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 const UserContext = createContext();
 
@@ -6,22 +6,21 @@ export const UserProvider = ({ children }) => {
   const [activeUserId, setActiveUserId] = useState(null);
   const [activeUserName, setActiveUserName] = useState('');
 
-  const setActiveUser = (userId, userName) => {
+  const setActiveUser = useCallback((userId, userName) => {
     setActiveUserId(userId);
     setActiveUserName(userName);
     localStorage.setItem('activeUserId', userId);
     localStorage.setItem('activeUserName', userName);
-  };
+  }, []);
 
-  const clearActiveUser = () => {
+  const clearActiveUser = useCallback(() => {
     setActiveUserId(null);
     setActiveUserName('');
     localStorage.removeItem('activeUserId');
     localStorage.removeItem('activeUserName');
-  };
+  }, []);
 
-  // Recuperar do localStorage ao carregar
-  useState(() => {
+  useEffect(() => {
     const storedUserId = localStorage.getItem('activeUserId');
     const storedUserName = localStorage.getItem('activeUserName');
     if (storedUserId) {
