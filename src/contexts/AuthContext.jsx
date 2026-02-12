@@ -40,7 +40,6 @@ export const AuthProvider = ({ children }) => {
       });
       setIsAuthenticated(true);
       
-      // Atualiza o UserContext com os dados do usuário logado
       setActiveUser(loginData.user_id, loginData.user_name);
       
       return { success: true };

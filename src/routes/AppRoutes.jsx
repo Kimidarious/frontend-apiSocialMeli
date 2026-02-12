@@ -9,19 +9,48 @@ import ExploreUsers from '../pages/ExploreUsers';
 import Promos from '../pages/Promos';
 import AllUsers from '../pages/AllUsers';
 import NotFound from '../pages/NotFound';
+import ProtectedRoute from '../components/auth/ProtectedRoute';
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/create-user" element={<CreateUser />} />
-      <Route path="/explore" element={<ExploreUsers />} />
-      <Route path="/all-users" element={<AllUsers />} />
-      <Route path="/followers" element={<Followers />} />
-      <Route path="/following" element={<Following />} />
-      <Route path="/feed" element={<Feed />} />
-      <Route path="/create-post" element={<CreatePost />} />
-      <Route path="/promos" element={<Promos />} />
+      <Route path="/explore" element={
+        <ProtectedRoute>
+          <ExploreUsers />
+        </ProtectedRoute>
+      } />
+      <Route path="/all-users" element={
+        <ProtectedRoute>
+          <AllUsers />
+        </ProtectedRoute>
+      } />
+      <Route path="/followers" element={
+        <ProtectedRoute>
+          <Followers />
+        </ProtectedRoute>
+      } />
+      <Route path="/following" element={
+        <ProtectedRoute>
+          <Following />
+        </ProtectedRoute>
+      } />
+      <Route path="/feed" element={
+        <ProtectedRoute>
+          <Feed />
+        </ProtectedRoute>
+      } />
+      <Route path="/create-post" element={
+        <ProtectedRoute>
+          <CreatePost />
+        </ProtectedRoute>
+      } />
+      <Route path="/promos" element={
+        <ProtectedRoute>
+          <Promos />
+        </ProtectedRoute>
+      } />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

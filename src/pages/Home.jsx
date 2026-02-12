@@ -26,7 +26,7 @@ const Home = () => {
         ) : (
           <div className="home-login-prompt">
             <p className="home-subtitle">
-              👆 Selecione seu usuário no canto superior direito
+              👆 Selecione seu usuário no canto superior esquerdo
             </p>
           </div>
         )}
