@@ -1,0 +1,4 @@
+/* Reutiliza estilos do Followers.css */
+@import './Followers.css';
+
+/* Estilos específicos de Following podem ser adicionados aqui */

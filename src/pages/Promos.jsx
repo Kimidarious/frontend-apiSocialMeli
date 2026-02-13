@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useUser } from '../contexts/UserContext';
 import { postService } from '../services/postService';
 import PostCard from '../components/post/PostCard';
-import './Feed.css';
+import './Promos.css';
 
 const Promos = () => {
   const { activeUserId } = useUser();

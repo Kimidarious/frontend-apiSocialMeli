@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useUser } from '../contexts/UserContext';
 import { userService } from '../services/userService';
 import UserCard from '../components/user/UserCard';
-import './Followers.css'; // Reutilizar estilos
+import './Following.css';
 
 const Following = () => {
   const { activeUserId } = useUser();

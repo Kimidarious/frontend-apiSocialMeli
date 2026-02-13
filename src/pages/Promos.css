@@ -1,0 +1,4 @@
+/* Reutiliza estilos do Feed.css */
+@import './Feed.css';
+
+/* Estilos específicos de Promos podem ser adicionados aqui */

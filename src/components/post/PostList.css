@@ -1,0 +1,11 @@
+.post-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .post-list {
+    gap: 15px;
+  }
+}
